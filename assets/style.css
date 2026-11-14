@@ -160,6 +160,7 @@ h2::before { content: ""; width: 6px; height: 1.1em; border-radius: 3px; backgro
 .fact dd address { font-style: normal; }
 .fact .note { display: block; font-weight: 400; color: var(--muted); font-size: .95rem; }
 .fact .country { font-weight: 400; color: var(--muted); }
+.fact .map-link { display: inline-block; margin-top: .4rem; font-weight: 500; font-size: .95rem; }
 .ext svg { width: 15px; height: 15px; vertical-align: -.15em; margin-left: .3rem; }
 .ico-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem 1rem; }
 .ico-row .num { font-size: 1.15rem; letter-spacing: .04em; font-variant-numeric: tabular-nums; }
