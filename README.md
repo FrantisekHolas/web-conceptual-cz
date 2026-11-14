@@ -3,7 +3,8 @@
 Jednostránková prezentace společnosti **CONCEPTUAL s.r.o.** (IČO 05081823): údaje o společnosti a kontakt,
 v češtině, angličtině a němčině.
 
-Čistě statický web bez sestavování a bez externích závislostí (žádné fonty ani skripty třetích stran).
+Čistě statický web bez sestavování a bez externích závislostí: písmo i vše ostatní se načítá z vlastního webu,
+nic z Google Fonts ani jiných služeb třetích stran.
 
 ## Struktura
 
@@ -14,6 +15,7 @@ v češtině, angličtině a němčině.
 | `de/index.html` | německá verze (de-DE) |
 | `assets/style.css` | společné styly všech jazykových verzí |
 | `assets/lang.js` | výběr jazyka (viz níže) |
+| `assets/fonts/` | písmo [Figtree](https://github.com/erikdkennedy/figtree) (licence SIL OFL 1.1), hostované přímo na webu |
 | `assets/logo.*` | logo (hlavní motiv), JPG + WebP ve dvou velikostech |
 | `favicon.ico`, `assets/favicon-*.png` | favicon (zelený dílek puzzle z loga) |
 | `apple-touch-icon.png`, `assets/icon-*.png`, `site.webmanifest` | ikony pro mobilní zařízení |
