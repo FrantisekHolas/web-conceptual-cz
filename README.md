@@ -15,7 +15,7 @@ nic z Google Fonts ani jiných služeb třetích stran.
 | `de/index.html` | německá verze (de-DE) |
 | `assets/style.css` | společné styly všech jazykových verzí |
 | `assets/lang.js` | výběr jazyka (viz níže) |
-| `assets/fonts/` | písmo [Figtree](https://github.com/erikdkennedy/figtree) (licence SIL OFL 1.1), hostované přímo na webu |
+| `assets/fonts/` | písma hostovaná přímo na webu, obě s licencí SIL OFL 1.1: [Host Grotesk](https://github.com/Element-Type/HostGrotesk) pro název firmy (zúžené na základní latinku), [Figtree](https://github.com/erikdkennedy/figtree) pro ostatní text |
 | `assets/logo.*` | logo (hlavní motiv), JPG + WebP ve dvou velikostech |
 | `favicon.ico`, `assets/favicon-*.png` | favicon (zelený dílek puzzle z loga) |
 | `apple-touch-icon.png`, `assets/icon-*.png`, `site.webmanifest` | ikony pro mobilní zařízení |
