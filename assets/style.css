@@ -20,6 +20,17 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Michroma (SIL Open Font License, see fonts/OFL-Michroma.txt) for the company name only.
+   It has a single weight; .brand-stroke thickens it slightly. */
+@font-face {
+  font-family: "Michroma";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/michroma-latin.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
   --brand: #65d12e;
   --brand-soft: #eef9e7;
@@ -32,6 +43,8 @@
   --radius: 14px;
   --shadow: 0 1px 2px rgba(28, 33, 25, .04), 0 8px 24px rgba(28, 33, 25, .06);
   --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-brand: "Michroma", var(--font);
+  --brand-stroke: .02em;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -68,7 +81,11 @@ a:focus-visible, .btn:focus-visible {
 /* ---------- Header ---------- */
 .site-header { border-bottom: 1px solid var(--line); background: rgba(255, 255, 255, .92); position: sticky; top: 0; z-index: 5; backdrop-filter: saturate(1.4) blur(8px); }
 .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 64px; }
-.brand { display: inline-flex; align-items: center; gap: .6rem; color: var(--ink); text-decoration: none; font-weight: 700; letter-spacing: .14em; font-size: .95rem; }
+.brand {
+  display: inline-flex; align-items: center; gap: .6rem; color: var(--ink); text-decoration: none;
+  font-family: var(--font-brand); font-weight: 400; letter-spacing: .06em; font-size: .95rem;
+  -webkit-text-stroke: var(--brand-stroke) currentColor;
+}
 .brand img { width: 30px; height: 30px; }
 .header-end { display: flex; align-items: center; gap: 1.75rem; }
 .nav { display: flex; gap: 1.5rem; }
@@ -95,14 +112,19 @@ a:focus-visible, .btn:focus-visible {
   font-size: .85rem; font-weight: 600; letter-spacing: .02em;
 }
 .eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--brand); }
+/* The heading scales with its column: "CONCEPTUAL" in Michroma is 10em wide, so 9.5cqi always fits on one line. */
+.hero-text { container-type: inline-size; }
 h1 {
-  margin: 0 0 1rem;
-  font-size: clamp(2.2rem, 5.2vw, 3.6rem);
-  line-height: 1.05;
-  letter-spacing: -.02em;
-  font-weight: 800;
+  margin: 0 0 1.1rem;
+  font-family: var(--font-brand);
+  font-size: clamp(1.6rem, 4vw, 2.85rem);
+  font-size: min(2.85rem, 9.5cqi);
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-weight: 400;
+  -webkit-text-stroke: var(--brand-stroke) currentColor;
 }
-h1 .suffix { color: var(--muted); font-weight: 600; }
+h1 .suffix { color: var(--muted); }
 .lead { margin: 0 0 2rem; color: var(--muted); font-size: 1.15rem; max-width: 34ch; }
 .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
 .btn {
@@ -188,6 +210,7 @@ h2::before { content: ""; width: 6px; height: 1.1em; border-radius: 3px; backgro
 @media (max-width: 600px) {
   .wrap { padding: 0 16px; }
   .nav { display: none; }
+  .brand { font-size: .85rem; }
   .lead { font-size: 1.05rem; }
   section.block { padding: 40px 0; }
   .facts { padding: 4px 20px; }
@@ -197,6 +220,13 @@ h2::before { content: ""; width: 6px; height: 1.1em; border-radius: 3px; backgro
   .channel .icon { width: 40px; height: 40px; }
   .channel .value { font-size: 1.02rem; }
   .actions .btn { flex: 1 1 auto; justify-content: center; }
+}
+
+@media (max-width: 400px) {
+  .site-header .wrap { gap: .75rem; }
+  .brand { font-size: .72rem; gap: .5rem; }
+  .brand img { width: 24px; height: 24px; }
+  .lang a { min-width: 2rem; padding: .3rem .4rem; }
 }
 
 @media print {

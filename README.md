@@ -15,7 +15,10 @@ nic z Google Fonts ani jiných služeb třetích stran.
 | `de/index.html` | německá verze (de-DE) |
 | `assets/style.css` | společné styly všech jazykových verzí |
 | `assets/lang.js` | výběr jazyka (viz níže) |
-| `assets/fonts/` | písmo [Inter](https://github.com/rsms/inter) (licence SIL OFL 1.1), hostované přímo na webu, aby stránka vypadala stejně na všech zařízeních |
+| `assets/fonts/` | písma hostovaná přímo na webu, obě s licencí SIL OFL 1.1 (texty licencí jsou ve stejné složce): [Michroma](https://github.com/googlefonts/Michroma-font) pro název firmy, [Inter](https://github.com/rsms/inter) pro ostatní text |
+
+Michroma má jen jeden řez. Název firmy je proto mírně zesílený obrysem; sílu nastavuje proměnná
+`--brand-stroke` v `assets/style.css` (0 = původní tloušťka).
 | `assets/logo.*` | logo (hlavní motiv), JPG + WebP ve dvou velikostech |
 | `favicon.ico`, `assets/favicon-*.png` | favicon (zelený dílek puzzle z loga) |
 | `apple-touch-icon.png`, `assets/icon-*.png`, `site.webmanifest` | ikony pro mobilní zařízení |
