@@ -105,13 +105,6 @@ a:focus-visible, .btn:focus-visible {
 /* ---------- Hero ---------- */
 .hero { padding: 56px 0 40px; }
 .hero .wrap { display: grid; grid-template-columns: 1fr 1.15fr; align-items: center; gap: 48px; }
-.eyebrow {
-  display: inline-flex; align-items: center; gap: .5rem;
-  margin: 0 0 1rem; padding: .3rem .8rem; border-radius: 1rem;
-  background: var(--brand-soft); color: var(--brand-ink);
-  font-size: .85rem; font-weight: 600; letter-spacing: .02em;
-}
-.eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--brand); }
 /* The heading scales with its column: "CONCEPTUAL" in Michroma is 10em wide, so 9.5cqi always fits on one line. */
 .hero-text { container-type: inline-size; }
 h1 {
@@ -288,7 +281,6 @@ h2::before { content: ""; width: 6px; height: 1.1em; border-radius: 3px; backgro
   .brand { font-size: .72rem; gap: .5rem; }
   .brand img { width: 24px; height: 24px; }
   .lang a { min-width: 2rem; padding: .3rem .4rem; }
-  .eyebrow { font-size: .78rem; padding: .3rem .7rem; }
 }
 
 @media print {
