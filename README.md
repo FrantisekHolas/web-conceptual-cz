@@ -16,6 +16,7 @@ nic z Google Fonts ani jiných služeb třetích stran.
 | `assets/style.css` | společné styly všech jazykových verzí |
 | `assets/lang.js` | výběr jazyka (viz níže) |
 | `assets/fonts/` | písma hostovaná přímo na webu, obě s licencí SIL OFL 1.1 (texty licencí jsou ve stejné složce): [Michroma](https://github.com/googlefonts/Michroma-font) pro název firmy, [Inter](https://github.com/rsms/inter) pro ostatní text |
+| `.github/workflows/zverejneni.yml` | zveřejnění na GitHub Pages jen se soubory webu |
 
 Michroma má jen jeden řez. Název firmy je proto mírně zesílený obrysem; sílu nastavuje proměnná
 `--brand-stroke` v `assets/style.css` (0 = původní tloušťka).
@@ -47,4 +48,6 @@ a otevřete <http://localhost:8000/>.
 
 ## Nasazení
 
-Obsah repozitáře nahrajte na libovolný statický hosting (GitHub Pages, webhosting apod.) do kořene webu.
+Web je na GitHub Pages: po každém nahrání do `main` ho zveřejní úloha GitHub Actions `.github/workflows/zverejneni.yml` (ručně: záložka **Actions → Zveřejnění webu → Run workflow**). V **Settings → Pages** je **Source: GitHub Actions** a vlastní doména `conceptual.cz`. Zveřejní se jen soubory webu, bez `README.md` a nastavení repozitáře (seznam `VYNECHAT` v úloze; nový soubor, který na web nepatří, je potřeba do seznamu doplnit).
+
+Na jiný statický hosting (webhosting apod.) stačí nahrát do kořene webu obsah repozitáře kromě `README.md` a složky `.github`.
