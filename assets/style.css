@@ -125,6 +125,7 @@ h1 {
   -webkit-text-stroke: var(--brand-stroke) currentColor;
 }
 h1 .suffix { color: var(--muted); }
+.motto { margin: -.35rem 0 1.25rem; font-size: 1.3rem; font-weight: 500; line-height: 1.3; letter-spacing: -.005em; color: var(--ink); }
 .lead { margin: 0 0 2rem; color: var(--muted); font-size: 1.15rem; max-width: 34ch; }
 .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
 .btn {
@@ -255,6 +256,7 @@ h2::before { content: ""; width: 6px; height: 1.1em; border-radius: 3px; backgro
   .wrap { padding: 0 16px; }
   .brand { font-size: .85rem; }
   .lead { font-size: 1.05rem; }
+  .motto { font-size: 1.15rem; margin-bottom: 1rem; }
   section.block { padding: 40px 0; }
   .facts { padding: 4px 20px; }
   .fact { grid-template-columns: 1fr; padding: 14px 0; }
